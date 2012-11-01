@@ -1,0 +1,10 @@
+<resources>
+
+    <string name="app_name">画像ダウンローダー</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_photo_downloader">画像ダウンローダー</string>
+    <string name="label_search">検索</string>
+    <string name="label_branding">results by &lt;a href=&quot;http://www.bing.com&quot;&gt;Bing&amp;#153;&lt;/a&gt;</string>
+
+</resources>
