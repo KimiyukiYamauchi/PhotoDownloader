@@ -226,21 +226,18 @@ public class PhotoDownloaderActivity extends Activity {
 					public void onItemClick(AdapterView<?> parent, View v,
 							int position, long id) {
 
-						Uri downloadUri;
 						try {
-							downloadUri = Uri.parse(((JSONObject) adapter
+							Uri downloadUri = Uri.parse(((JSONObject) adapter
 									.getItem(position)).getString("MediaUrl"));
 							DownloadManager dm = (DownloadManager) getSystemService(DOWNLOAD_SERVICE);
 							DownloadManager.Request dr = new DownloadManager.Request(
 									downloadUri);
-							String fn = URLDecoder.decode(
-									downloadUri.getLastPathSegment(), "UTF-8");
+							String fn = URLDecoder.decode(downloadUri
+									.getLastPathSegment());
 							dr.setDestinationInExternalPublicDir(
 									Environment.DIRECTORY_DOWNLOADS, fn);
 							dm.enqueue(dr);
 						} catch (JSONException e) {
-							e.printStackTrace();
-						} catch (UnsupportedEncodingException e) {
 							e.printStackTrace();
 						}
 
